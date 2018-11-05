@@ -76,7 +76,7 @@ namespace FakeServer
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Fake JSON API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Generic JSON SQL Api", Version = "v1" });
 
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
                 var xmlPath = Path.Combine(basePath, "FakeServer.xml");
@@ -157,7 +157,7 @@ namespace FakeServer
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fake JSON API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Generic JSON SQL Api");
                 c.SupportedSubmitMethods(SubmitMethod.Get, SubmitMethod.Head, SubmitMethod.Post, SubmitMethod.Put, SubmitMethod.Patch, SubmitMethod.Delete);
             });
         }

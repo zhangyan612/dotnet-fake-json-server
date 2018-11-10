@@ -86,7 +86,22 @@ namespace FakeServer.Common
             return result;
         }
 
-        public static QueryOptions GetQueryOptions(IQueryCollection query, int skip, int take)
+
+		public static List<string> GetQueryParameters(IQueryCollection query)
+		{
+			List<string> args = new List<string>();
+
+			foreach (string k in query.Keys.ToList()) // skip 1 if first one is stored proc name
+			{
+				var key = "@" + k;
+				var value = query[k].ToString();
+				args.Add(key);
+				args.Add(value);
+			}
+			return args;
+		}
+
+		public static QueryOptions GetQueryOptions(IQueryCollection query, int skip, int take)
         {
             var skipWord = "skip";
             var takeWord = "take";

@@ -1,54 +1,175 @@
 {
-	"product": [
-		{
-			"productId": 1,
-			"productName": "Leaf Rake",
-			"productCode": "GDN-0011",
-			"releaseDate": "March 19, 2016",
-			"description": "Leaf rake with 48-inch wooden handle.",
-			"price": 19.95,
-			"starRating": 3.2,
-			"imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-		},
-		{
-			"productId": 2,
-			"productName": "Garden Cart",
-			"productCode": "GDN-0023",
-			"releaseDate": "March 18, 2016",
-			"description": "15 gallon capacity rolling garden cart",
-			"price": 32.99,
-			"starRating": 4.2,
-			"imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-		},
-		{
-			"productId": 5,
-			"productName": "Hammer",
-			"productCode": "TBX-0048",
-			"releaseDate": "May 21, 2016",
-			"description": "Curved claw steel hammer",
-			"price": 8.9,
-			"starRating": 4.8,
-			"imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-		},
-		{
-			"productId": 8,
-			"productName": "Saw",
-			"productCode": "TBX-0022",
-			"releaseDate": "May 15, 2016",
-			"description": "15-inch steel blade hand saw",
-			"price": 11.55,
-			"starRating": 3.7,
-			"imageUrl": "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
-		},
-		{
-			"productId": 10,
-			"productName": "Video Game Controller",
-			"productCode": "GMG-0042",
-			"releaseDate": "October 15, 2015",
-			"description": "Standard two-button video game controller",
-			"price": 35.95,
-			"starRating": 4.6,
-			"imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-		}
-	]
+  "product": [
+    {
+      "productId": 1,
+      "productName": "Leaf Rake",
+      "productCode": "GDN-0011",
+      "releaseDate": "March 19, 2016",
+      "description": "Leaf rake with 48-inch wooden handle.",
+      "price": 19.95,
+      "starRating": 3.2,
+      "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
+    {
+      "productId": 2,
+      "productName": "Garden Cart",
+      "productCode": "GDN-0023",
+      "releaseDate": "March 18, 2016",
+      "description": "15 gallon capacity rolling garden cart",
+      "price": 32.99,
+      "starRating": 4.2,
+      "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+    },
+    {
+      "productId": 5,
+      "productName": "Hammer",
+      "productCode": "TBX-0048",
+      "releaseDate": "May 21, 2016",
+      "description": "Curved claw steel hammer",
+      "price": 8.9,
+      "starRating": 4.8,
+      "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+    },
+    {
+      "productId": 8,
+      "productName": "Saw",
+      "productCode": "TBX-0022",
+      "releaseDate": "May 15, 2016",
+      "description": "15-inch steel blade hand saw",
+      "price": 11.55,
+      "starRating": 3.7,
+      "imageUrl": "http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
+    },
+    {
+      "productId": 10,
+      "productName": "Video Game Controller",
+      "productCode": "GMG-0042",
+      "releaseDate": "October 15, 2015",
+      "description": "Standard two-button video game controller",
+      "price": 35.95,
+      "starRating": 4.6,
+      "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+    }
+  ],
+  "fields": [
+    {
+      "type": "input",
+      "label": "Text",
+      "inputType": "text",
+      "name": "text",
+      "placeholder": "",
+      "validations": [],
+      "id": 0
+    },
+    {
+      "type": "input",
+      "label": "Text",
+      "inputType": "number",
+      "name": "line",
+      "placeholder": "",
+      "validations": [],
+      "id": 1
+    },
+    {
+      "type": "input",
+      "label": "Required Text field",
+      "inputType": "text",
+      "name": "RequiredText",
+      "placeholder": "Required",
+      "validations": [
+        {
+          "name": "required",
+          "message": "Text is Required"
+        },
+        {
+          "name": "pattern",
+          "message": "Accept only text"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "type": "input",
+      "label": "Email Address",
+      "inputType": "email",
+      "name": "email",
+      "placeholder": "Email Address",
+      "validations": [
+        {
+          "name": "required",
+          "message": "Email Required"
+        },
+        {
+          "name": "pattern",
+          "message": "Invalid email"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "type": "input",
+      "label": "Password",
+      "inputType": "password",
+      "name": "password",
+      "placeholder": "Enter Password",
+      "validations": [
+        {
+          "name": "required",
+          "message": "Password Required"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "type": "radiobutton",
+      "label": "Form of organization",
+      "name": "radio",
+      "options": [
+        "Corporation",
+        "Trust",
+        "Association",
+        "Other"
+      ],
+      "value": "Corporation",
+      "id": 5
+    },
+    {
+      "type": "date",
+      "label": "Start Date",
+      "name": "date",
+      "placeholder": "Select date",
+      "validations": [
+        {
+          "name": "required",
+          "message": "Date is Required"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "type": "select",
+      "label": "State",
+      "name": "select",
+      "value": "IL",
+      "options": [
+        "IL",
+        "OH",
+        "AL",
+        "CA"
+      ],
+      "id": 7
+    },
+    {
+      "type": "checkbox",
+      "label": "Self-employed?",
+      "name": "checkbox",
+      "value": true,
+      "id": 8
+    },
+    {
+      "type": "button",
+      "label": "Save",
+      "id": 9
+    }
+  ]
 }

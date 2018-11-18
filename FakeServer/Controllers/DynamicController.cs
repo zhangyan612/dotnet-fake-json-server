@@ -209,7 +209,7 @@ namespace FakeServer.Controllers
         }
 
         /// <summary>
-        /// Add new item
+        /// Add new item, only one item at a time
         /// </summary>
         /// <param name="collectionId">Collection id</param>
         /// <param name="item">Item to add</param>
@@ -231,6 +231,30 @@ namespace FakeServer.Controllers
             await collection.InsertOneAsync(item);
 
             return Created($"{Request.GetDisplayUrl()}/{item["id"]}", new { id = item["id"] });
+        }
+
+        /// <summary>
+        /// Add new list of items
+        /// </summary>
+        /// <param name="collectionId">Collection id</param>
+        /// <param name="items">List of data</param>
+        /// <returns>Created item id</returns>
+        /// <response code="201">Item created</response>
+        /// <response code="400">Item is null</response>
+        /// <response code="409">Collection is an object</response>
+        [HttpPost("{collectionId}/list")]
+        public IActionResult AddListItem(string collectionId, [FromBody]JArray items)
+        {
+            if (items == null)
+                return BadRequest();
+
+            if (_ds.IsItem(collectionId))
+                return Conflict();
+
+            var collection = _ds.GetCollection(collectionId);
+            collection.InsertMany(items);
+
+            return Created($"{Request.GetDisplayUrl()}/{items.Last["id"]}", new { id = items.Last["id"] });
         }
 
         /// <summary>

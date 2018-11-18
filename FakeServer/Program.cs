@@ -16,7 +16,7 @@ namespace FakeServer
 
         public static IConfiguration Configuration { get; set; }
 
-        private static string _defaultStoreFile = "datastore.json";
+        private static string _defaultStoreFile = "products.json";
 
         public static void Main(string[] args)
         {

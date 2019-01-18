@@ -55,6 +55,11 @@
     {
       "type": "text",
       "label": "Title",
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 0
     },
     {
@@ -64,6 +69,11 @@
       "name": "text",
       "placeholder": "",
       "validations": [],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 1
     },
     {
@@ -73,6 +83,11 @@
       "name": "line",
       "placeholder": "",
       "validations": [],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 2
     },
     {
@@ -91,6 +106,11 @@
           "message": "Accept only text"
         }
       ],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 3
     },
     {
@@ -109,6 +129,11 @@
           "message": "Invalid email"
         }
       ],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 4
     },
     {
@@ -123,6 +148,11 @@
           "message": "Password Required"
         }
       ],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 5
     },
     {
@@ -135,6 +165,11 @@
         "Association",
         "Other"
       ],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "value": "Corporation",
       "id": 6
     },
@@ -149,6 +184,11 @@
           "message": "Date is Required"
         }
       ],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 7
     },
     {
@@ -162,6 +202,11 @@
         "AL",
         "CA"
       ],
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 8
     },
     {
@@ -169,11 +214,21 @@
       "label": "Self-employed?",
       "name": "checkbox",
       "value": true,
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 9
     },
     {
       "type": "button",
       "label": "Save",
+      "condition": {
+        "show": "",
+        "when": null,
+        "equal": ""
+      },
       "id": 10
     }
   ],
@@ -449,6 +504,73 @@
         }
       ],
       "id": 2
+    },
+    {
+      "formName": "Calculation Form",
+      "formPath": "calculation",
+      "fields": [
+        {
+          "type": "text",
+          "label": "This is line level info",
+          "id": 0,
+          "name": null
+        },
+        {
+          "type": "input",
+          "label": "Asset Name",
+          "inputType": "text",
+          "name": "text3",
+          "placeholder": "",
+          "validations": [],
+          "id": 1
+        },
+        {
+          "type": "input",
+          "label": "EIN",
+          "inputType": "text",
+          "name": "text4",
+          "placeholder": "",
+          "validations": [],
+          "id": 1
+        },
+        {
+          "type": "input",
+          "label": "Beginning Basis",
+          "inputType": "number",
+          "name": "line5",
+          "placeholder": "",
+          "validations": [],
+          "id": 2
+        },
+        {
+          "type": "input",
+          "label": "Addition/Subtraction",
+          "inputType": "number",
+          "name": "line6",
+          "placeholder": "",
+          "validations": [],
+          "id": 2
+        },
+        {
+          "type": "input",
+          "label": "Other Adjustment",
+          "inputType": "number",
+          "name": "line7",
+          "placeholder": "",
+          "validations": [],
+          "id": 2
+        },
+        {
+          "type": "input",
+          "label": "Ending Basis",
+          "inputType": "number",
+          "name": "line8",
+          "placeholder": "",
+          "validations": [],
+          "id": 2
+        }
+      ],
+      "id": 3
     }
   ],
   "sideBar": [
@@ -466,6 +588,11 @@
       "name": "Another Tax Form",
       "url": "test3",
       "id": 2
+    },
+    {
+      "name": "Calculation Form",
+      "url": "calculation",
+      "id": 3
     }
   ],
   "test": [
@@ -550,24 +677,40 @@
       "id": 3
     },
     {
-      "text3": "New Form New",
-      "line4": "2321",
-      "line5": 3321,
-      "line6": "231",
+      "text3": "test update",
+      "line4": "111",
+      "line5": 1111,
+      "line6": "121",
       "date7": {
-        "year": 2018,
-        "month": 12,
-        "day": 2
+        "year": 2019,
+        "month": 1,
+        "day": 9
+      },
+      "date8": null,
+      "select9": "IL",
+      "checkbox10": true,
+      "radio11": "Corporation",
+      "id": 5
+    },
+    {
+      "text3": "test more",
+      "line4": "2322",
+      "line5": 3322,
+      "line6": "323",
+      "date7": {
+        "year": 2019,
+        "month": 1,
+        "day": 18
       },
       "date8": {
-        "year": 2018,
-        "month": 11,
-        "day": 8
+        "year": 2019,
+        "month": 1,
+        "day": 12
       },
       "select9": "IL",
       "checkbox10": true,
       "radio11": "Trust",
-      "id": 4
+      "id": 7
     }
   ],
   "test2": [
@@ -582,6 +725,43 @@
       },
       "select7": "OH",
       "checkbox8": true,
+      "id": 0
+    },
+    {
+      "text3": "new data",
+      "line4": "232",
+      "line5": 1232,
+      "date6": {
+        "year": 2019,
+        "month": 1,
+        "day": 19
+      },
+      "select7": "AL",
+      "checkbox8": true,
+      "id": 1
+    },
+    {
+      "text3": "Test Org",
+      "line4": "232",
+      "line5": 1232,
+      "date6": {
+        "year": 2019,
+        "month": 1,
+        "day": 19
+      },
+      "select7": "OH",
+      "checkbox8": true,
+      "id": 2
+    }
+  ],
+  "calculation": [
+    {
+      "text3": "Test Asset",
+      "text4": "342343",
+      "line5": "324343",
+      "line6": "23434",
+      "line7": "342",
+      "line8": "23434",
       "id": 0
     }
   ]
